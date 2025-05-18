@@ -37,16 +37,14 @@ class Program
                     journal.DisplayJournal();
                     break;
                 case "3":
-                    Console.Write("Enter filename to save:");
-                    string saveFile = Console.ReadLine();
+                    string saveFile = "Journal.csv";
                     journal.SaveToFile(saveFile);
-                    Console.WriteLine("kept safely");
+                    Console.WriteLine($"Saved to {saveFile}");
                     break;
                 case "4":
-                    Console.Write("load filename to load:");
-                    string loadFile = Console.ReadLine();
+                    string loadFile = "Journal.csv";
                     journal.LoadFromFile(loadFile);
-                    Console.WriteLine("found in the archives");
+                    Console.WriteLine($"Loaded from {loadFile}");
                     break;
                 case "5":
                     running = false;
